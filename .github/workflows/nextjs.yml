@@ -1,22 +1,17 @@
-name: ABSEN
+name: Yugi-workflow
 on: [push]
 jobs:
-  next-js-workflow:
-    runs-on: ubuntu-20.04
+  workflow:
+    runs-on: ubuntu-latest
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v3
-
-     - name: Set up Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16
-
-     - name: install dependencies
-        run: npm i
-
-      - name: unit testing
+          node-version: '16'
+      - name: Install Package
+        run: npm install
+      - name: run test
         run: npx nx test yugi-explorer
-
-      - name: integration testing
+      - name: run cypress
         run: npx nx e2e yugi-explorer-e2e --browser chrome
+
