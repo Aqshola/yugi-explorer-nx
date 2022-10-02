@@ -40,7 +40,7 @@ export function Head(props: HeadProps) {
       />
       <meta
         property="og:image"
-        content={`${locationOrigin}/api/og?title=${props.title || ""}`}
+        content={`${locationOrigin}/api/og?title=${props.title || "Yugi Explorer"}`}
       />
 
       <meta property="twitter:card" content="summary_large_image" />
@@ -55,7 +55,7 @@ export function Head(props: HeadProps) {
       />
       <meta
         property="twitter:image"
-        content={`${locationOrigin}/api/og?title=${props.title || ""}`}
+        content={`${locationOrigin}/api/og?title=${props.title || "Yugi Explorer"}`}
       ></meta>
       {props.children}
     </NextHead>

@@ -1,0 +1,23 @@
+name: ABSEN
+on: push
+jobs:
+  next:
+    runs-on: ubuntu-20.04
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: install dependencies
+        run: npm i
+
+      - name: unit testing
+        run: npx nx test yugi-explorer
+
+      - name: integration testing
+        run: npx nx e2e yugi-explorer-e2e --browser chrome
