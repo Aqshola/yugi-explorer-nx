@@ -20,6 +20,7 @@ export function Head(props: HeadProps) {
   const title=props.title || "Welcome to Yugi Explorer"
   return (
     <NextHead>
+
       <title>{""+title}</title>
       <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico"/>
       <meta name="title" content={""+title} />

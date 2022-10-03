@@ -1,4 +1,3 @@
-import styles from './index.module.css';
 import NextImage from 'next/image';
 import Card from '../components/card/explore/explore';
 import { FormEvent, useEffect, useState } from 'react';
@@ -96,9 +95,10 @@ export function Index() {
       </Head>
       <div className="min-h-screen bg-blue-primary max-w-screen-2xl mx-auto py-14 ">
         <Link href={'/'} passHref>
-          <a>
+          <a aria-label='Home'>
             <div className="px-5 md:px-14 mx-auto w-fit h-fit ">
               <NextImage
+                aria-label='YugiOh Logo'
                 src={'/image/logo.png'}
                 objectFit="cover"
                 width={356}

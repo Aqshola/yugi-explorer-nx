@@ -7,7 +7,7 @@ describe('Index Page Functionality', () => {
   });
 
   it('should see loading component', () => {
-    cy.get('div[aria-label="loading"]').should('be.visible');
+    cy.get('.loading').should('be.visible');
   });
 
   it('Should have initial Cards', () => {

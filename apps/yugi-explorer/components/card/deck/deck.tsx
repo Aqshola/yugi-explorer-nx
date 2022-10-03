@@ -58,7 +58,7 @@ export function Deck(props: DeckProps) {
     >
       <div className="absolute left-0 w-full h-full flex justify-start pl-24 pb-24">
         <motion.button
-
+          aria-label='Add to Deck'
           id="add-deck"
           onClick={addDeck}
           className={'action-deck z-20'}

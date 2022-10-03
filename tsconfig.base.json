@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@yugi/shared": ["libs/shared/src/index.ts"],
-      "@yugi/ui": ["libs/ui/src/index.ts"]
+      "@yugi/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
