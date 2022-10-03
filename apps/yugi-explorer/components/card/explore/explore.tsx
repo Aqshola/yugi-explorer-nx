@@ -115,6 +115,9 @@ export function Explore(props: ExploreProps) {
               objectFit="cover"
               placeholder="blur"
               blurDataURL="/image/CardBack.jpg"
+              sizes="(max-width: 456px) 100vw,
+              (max-width: 277px) 50vw,
+              33vw"
             />
           </div>
           <div className={"flip-transition delay-700 absolute  top-0 h-[200px] w-full "+(!deck?'flipped':'')}>

@@ -12,6 +12,7 @@ import Head from '../components/layouts/head/head';
 import { useRouter } from 'next/router';
 import usePreserveScroll from '../hooks/use-preserve-scroll/use-preserve-scroll';
 import Link from 'next/link';
+import Layout from '../components/layouts/layout/layout';
 
 const PAGE_SIZE = 15;
 
@@ -93,7 +94,7 @@ export function Index() {
           }}
         />
       </Head>
-      <div className="min-h-screen bg-blue-primary max-w-screen-2xl mx-auto py-14 ">
+      <Layout>
         <Link href={'/'} passHref>
           <a aria-label='Home'>
             <div className="px-5 md:px-14 mx-auto w-fit h-fit ">
@@ -151,7 +152,7 @@ export function Index() {
             </div>
           </AnimatePresence>
         )}
-      </div>
+      </Layout>
     </>
   );
 }

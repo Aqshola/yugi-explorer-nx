@@ -6,7 +6,7 @@ export interface LayoutProps {
 
 export function Layout(props: LayoutProps) {
   return (
-    <div className="min-h-screen bg-blue-primary py-14">
+    <div className="min-h-screen bg-blue-primary py-14 w-full">
       <div className="max-w-screen-2xl h-full mx-auto">
         {props.children}
       </div>
