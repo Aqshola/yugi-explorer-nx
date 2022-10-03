@@ -6,7 +6,7 @@ import CardDeck from '../../components/card/deck/deck';
 import Head from '../../components/layouts/head/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Layout from 'apps/yugi-explorer/components/layouts/layout/layout';
+import Layout from '../../components/layouts/layout/layout';
 /* eslint-disable-next-line */
 export interface DeckProps {}
 

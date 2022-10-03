@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { YugiCardType } from '../../types/card';
 import Loading from '../../components/loading/loading';
 import Head from '../../components/layouts/head/head';
-import Layout from 'apps/yugi-explorer/components/layouts/layout/layout';
+import Layout from '../../components/layouts/layout/layout';
 /* eslint-disable-next-line */
 
 function Id() {
