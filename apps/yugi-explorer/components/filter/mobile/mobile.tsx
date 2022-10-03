@@ -102,7 +102,7 @@ export function Mobile(props: MobileProps) {
         }
       >
         <div>
-          <label htmlFor="search" className="text-2xl text-white font-grenze">
+          <label htmlFor="search-mobile" className="text-2xl text-white font-grenze">
             Search Card
           </label>
           <div className="bg-blue-dark rounded-3xl flex p-3 mt-2 w-full items-center gap-5">
@@ -122,7 +122,7 @@ export function Mobile(props: MobileProps) {
             <input
               onChange={props.onChangeCallback}
               value={props.inputValue}
-              id="search"
+              id="search-mobile"
               type="search"
               placeholder="Search Card..."
               className="bg-transparent focus:outline-none border-none outline-none text-white font-grenze font-light tracking-wide text-xl w-full"

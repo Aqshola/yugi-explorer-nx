@@ -5,6 +5,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import CardDeck from '../../components/card/deck/deck';
 import Head from '../../components/layouts/head/head';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 /* eslint-disable-next-line */
 export interface DeckProps {}
 
@@ -83,14 +84,19 @@ export function Deck() {
         />
       </Head>
       <div className="min-h-screen bg-blue-primary max-w-screen-2xl mx-auto py-14">
-        <div className="mx-auto w-fit h-fit px-5 md:px-14">
-          <NextImage
-            src={'/image/logo.png'}
-            objectFit="cover"
-            width={356}
-            height={125}
-          />
-        </div>
+      <Link href={'/'} passHref>
+          <a aria-label='Home'>
+            <div className="px-5 md:px-14 mx-auto w-fit h-fit ">
+              <NextImage
+                aria-label='YugiOh Logo'
+                src={'/image/logo.png'}
+                objectFit="cover"
+                width={356}
+                height={125}
+              />
+            </div>
+          </a>
+        </Link>
 
         <h1 className="font-grenze text-6xl text-center text-yellow-primary  mt-5 px-5 md:px-14">
           Yugi Explorer

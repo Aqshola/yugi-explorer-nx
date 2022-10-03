@@ -16,7 +16,8 @@ export function Loading() {
       exit={{
         opacity: 0,
       }}
-      aria-label='loading'
+      className="loading"
+      aria-roledescription='loading'
     >
       <motion.div
         className="flex gap-2"
