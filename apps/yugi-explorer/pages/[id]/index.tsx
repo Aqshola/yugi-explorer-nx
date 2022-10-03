@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { YugiCardType } from '../../types/card';
 import Loading from '../../components/loading/loading';
 import Head from '../../components/layouts/head/head';
+import Layout from 'apps/yugi-explorer/components/layouts/layout/layout';
 /* eslint-disable-next-line */
 
 function Id() {
@@ -27,8 +28,8 @@ function Id() {
     {data &&(
       <Head title={"Card " + typeof id!==undefined ?id.toString():""} description={"Detail about "+id.toString()}/>
     )}
-    <div className="min-h-screen max-w-screen-2xl mx-auto  bg-blue-primary">
-      <div className="pt-10 px-5">
+    <Layout>
+      <div className="px-5">
         <button
           onClick={() => router.back()}
           className="bg-yellow-primary px-5 py-2 rounded-md font-grenze"
@@ -102,7 +103,7 @@ function Id() {
           )}
         </div>
       </div>
-    </div>
+    </Layout>
     </>
   );
 }

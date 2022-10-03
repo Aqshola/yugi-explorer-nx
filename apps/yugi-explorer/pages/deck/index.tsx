@@ -6,6 +6,7 @@ import CardDeck from '../../components/card/deck/deck';
 import Head from '../../components/layouts/head/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Layout from 'apps/yugi-explorer/components/layouts/layout/layout';
 /* eslint-disable-next-line */
 export interface DeckProps {}
 
@@ -83,7 +84,7 @@ export function Deck() {
           }}
         />
       </Head>
-      <div className="min-h-screen bg-blue-primary max-w-screen-2xl mx-auto py-14">
+      <Layout>
       <Link href={'/'} passHref>
           <a aria-label='Home'>
             <div className="px-5 md:px-14 mx-auto w-fit h-fit ">
@@ -135,7 +136,7 @@ export function Deck() {
                 </div>
               ))}
         </div>
-      </div>
+      </Layout>
     </>
   );
 }

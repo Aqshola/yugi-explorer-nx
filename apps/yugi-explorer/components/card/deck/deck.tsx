@@ -98,6 +98,9 @@ export function Deck(props: DeckProps) {
               objectFit="cover"
               placeholder="blur"
               blurDataURL="/image/CardBack.jpg"
+              sizes="(max-width: 456px) 100vw,
+              (max-width: 277px) 50vw,
+              33vw"
             />
           </div>
         </a>

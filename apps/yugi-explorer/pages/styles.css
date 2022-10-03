@@ -24,6 +24,7 @@
 }
 .btn-deck{
 
-  @apply    translate-x-[45px] md:translate-x-[70px] translate-y-[-120px]
+  @apply   translate-x-[45px] md:translate-x-[40px] lg:translate-x-[70px] translate-y-[-120px]
 }
+
 
