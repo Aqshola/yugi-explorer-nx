@@ -41,8 +41,8 @@ describe('Deck', () => {
   });
 
   it("should be able to filter card based on input",async ()=>{
-    const input=await screen.findByLabelText("Search Card")
-    fireEvent.change(input,{target:{value:"None"}})
+    const input=await screen.findAllByLabelText("Search Card")
+    fireEvent.change(input[0],{target:{value:"None"}})
 
     setTimeout(async () => {
       const findCard = await screen.findAllByTestId('img-card');
