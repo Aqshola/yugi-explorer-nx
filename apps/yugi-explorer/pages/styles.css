@@ -17,6 +17,10 @@
   perspective: 1000px;
 }
 
+body{
+  @apply bg-blue-primary;
+}
+
 
 
 .action-deck{
