@@ -16,7 +16,7 @@ const style = `
 export default withOGImage<'query', keyof typeof QueryParams>({
   strategy: 'query', // Query strategy is the default one
   template: {
-    react: ({ title }) => {
+    react: ({ title}) => {
       return (
         <html>
           <head>
@@ -39,7 +39,7 @@ export default withOGImage<'query', keyof typeof QueryParams>({
 
           <body className="w-full bg-blue-900 p-5 flex flex-col justify-center items-center">
             <div className='w-54 h-54 flex'>
-              <img src="/image/logo.png" alt="logo" className='w-full h-full object-cover'/>
+              <img src={`${process.env.NX_DEPLOY_URL}/image/logo.png`} alt="logo" className='w-full h-full object-cover'/>
             </div>
             <div>
                 <h1 className='text-yellow-400 text-center font-bold text-3xl'>Yugi Explorer</h1>
