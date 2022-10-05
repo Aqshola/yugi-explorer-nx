@@ -13,37 +13,15 @@ export default withOGImage<'query', keyof typeof QueryParams>({
       return `
         <html>
           <head>
-            <link
-              href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-              rel="stylesheet"
-            />
-
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-            <link
-              rel="preconnect"
-              href="https://fonts.gstatic.com"
-              crossOrigin="true"
-            />
-
-            <link
-              href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-              rel="stylesheet"
-            />
-
-            <style>
-              *{
-                font-family: 'Grenze', serif;
-              }
-            </style>
+            ${getStyle()}
           </head>
-          <body class="w-full bg-blue-900 p-5 flex flex-col justify-center items-center">
-            <div class='w-54 h-54 flex'>
-              <img src='${process.env.NX_DEPLOY_URL}/image/logo.jpg'} alt="logo" class='w-full h-full object-cover'/>
+          <body class="container">
+            <div class='img-container'>
+              <img src='${process.env.NX_DEPLOY_URL}/image/logo.jpg'} alt="logo" class=img'/>
             </div>
             <div>
-                <h1 class='text-yellow-400 text-center font-bold text-3xl'>Yugi Explorer</h1>
-                <h2 class='font-medium text-white text-lg text-center'>${title}</h2>
+                <h1 class='heading1'>Yugi Explorer</h1>
+                <h2 class='heading2'>${title}</h2>
             </div>
           </body>
         </html>
@@ -51,3 +29,53 @@ export default withOGImage<'query', keyof typeof QueryParams>({
     }
   }
 });
+
+
+const getStyle=()=> `
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Grenze:wght@400;500;600;700&display=swap');
+    *{
+      font-family: 'Grenze', serif;
+    }
+
+    .container{
+      width:100vw;
+      height:100vh;
+      background-color:#11007E
+    }
+
+    .img-container{
+      width:200px;
+      height:200px;
+      display:flex;
+    }
+
+    .img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:flex;
+    }
+
+    .heading1{
+      color:#FFC100;
+      text-align:center;
+      font-weight:700;
+      font-size:24px;
+      line-height:32px;
+    }
+
+    .heading2{
+      color:white;
+      text-align:center;
+      font-weight:500;
+      font-size:18px;
+      line-height:28px;
+    }
+
+
+
+  </style>
+
+
+`
