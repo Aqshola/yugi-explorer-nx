@@ -45,7 +45,7 @@ export function Head(props: HeadProps) {
       <meta
         name="image"
         property="og:image"
-        content={`${locationOrigin}/api/og?title=${
+        content={`${process.env.NX_DEPLOY_URL}/api/og?title=${
           props.title || 'Yugi Explorer'
         }&logo=${process.env.NX_DEPLOY_URL}/image/logo.jpg`}
       />
@@ -64,7 +64,7 @@ export function Head(props: HeadProps) {
       />
       <meta
         name="twitter:image"
-        content={`${locationOrigin}/api/og?title=${
+        content={`${process.env.NX_DEPLOY_URL}/api/og?title=${
           props.title || 'Yugi Explorer'
         }&logo=${process.env.NX_DEPLOY_URL}/image/logo.jpg`}
       />
