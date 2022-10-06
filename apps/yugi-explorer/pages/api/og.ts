@@ -3,13 +3,14 @@ import { withOGImage } from 'next-api-og-image';
 /* tslint:disable */
 enum QueryParams {
   'title',
+  'logo'
 }
 
 
 
 export default withOGImage<'query', keyof typeof QueryParams>({
   template:{
-    html:async ({title})=>{
+    html:async ({title,logo})=>{
       return `
         <html>
           <head>
@@ -17,7 +18,7 @@ export default withOGImage<'query', keyof typeof QueryParams>({
           </head>
           <body class="container">
             <div class='img-container'>
-              <img src='${process.env.NX_DEPLOY_URL}/image/logo.jpg'} alt="logo" class=img'/>
+              <img src='${logo}' alt="logo" class=img'/>
             </div>
             <div>
                 <h1 class='heading1'>Yugi Explorer</h1>
@@ -39,15 +40,20 @@ const getStyle=()=> `
     }
 
     .container{
+      display: flex;
+      flex-direction: column;
       width:100vw;
       height:100vh;
-      background-color:#11007E
+      background-color:#11007E;
+      justify-content: center;
+      align-items: center;
     }
 
     .img-container{
       width:200px;
       height:200px;
       display:flex;
+      justify-content:center;
     }
 
     .img{
