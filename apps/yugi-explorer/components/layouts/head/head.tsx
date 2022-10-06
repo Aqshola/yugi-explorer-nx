@@ -52,6 +52,7 @@ export function Head(props: HeadProps) {
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="Yugi Explorer" />
+      <meta property="twitter:url" content={locationOrigin}/>
       <meta
         name="twitter:title"
         content={props.title || ' Welcome to Yugi Explorer'}

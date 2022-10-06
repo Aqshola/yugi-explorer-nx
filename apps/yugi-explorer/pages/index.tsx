@@ -85,6 +85,8 @@ export function Index() {
     return () => clearTimeout(debounce);
   }
 
+  console.log("WELCOME")
+
   return (
     <>
       <Head>
