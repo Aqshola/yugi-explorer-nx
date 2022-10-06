@@ -9,7 +9,7 @@ export interface HeadProps {
 }
 
 export function Head(props: HeadProps) {
-  let locationOrigin = 'localhost:4200';
+  let locationOrigin = process.env.NX_DEPLOY_URL;
   let origin = '';
   if (typeof window !== 'undefined') {
     locationOrigin = window.location.origin;
